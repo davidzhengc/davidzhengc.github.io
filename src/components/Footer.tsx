@@ -1,3 +1,5 @@
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -6,10 +8,12 @@ const Footer = () => {
           <p>&copy; 2025 David Zheng. All rights reserved.</p>
           <div className="social-links">
             <a
+              id="footer-github"
               href="https://github.com/davidzhengc"
               target="_blank"
               rel="noopener noreferrer"
             >
+              <FaGithub className="btn-icon" />
               GitHub
             </a>
             <a
@@ -17,6 +21,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
+              <FaLinkedin className="btn-icon" />
               LinkedIn
             </a>
           </div>

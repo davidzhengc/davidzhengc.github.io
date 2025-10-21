@@ -19,7 +19,9 @@ function App() {
       <section id="projects">
         <Projects />
       </section>
-      <section id="contact"></section>
+      <section id="contact">
+        <Contact />
+      </section>
       <Footer />
     </div>
   );

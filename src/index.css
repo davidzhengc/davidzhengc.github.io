@@ -440,7 +440,130 @@ section {
 }
 
 /* Contact Section */
+.contact {
+  background: var(--bg-secondary);
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
 
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-info h3 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.contact-info p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: var(--primary-color);
+}
+
+.btn-email:hover {
+  color: #3b82f6;
+}
+
+.email-icon {
+  font-size: 8rem;
+}
+
+.contact-details {
+  margin-top: 2rem;
+}
+
+.contact-item {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--bg-card);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.contact-item strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.contact-item span {
+  color: var(--text-color);
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 2;
+  column-gap: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group.name {
+  grid-column: 1;
+}
+
+.form-group.email {
+  grid-column: 2;
+}
+
+.form-group.subject {
+  grid-column: span 2;
+}
+
+.form-group.message {
+  grid-column: span 2;
+}
+
+.contact-form .btn {
+  grid-column: 2;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: var(--bg-card);
+  color: var(--text-color);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+}
 
 /* Footer */
 .footer {
@@ -486,6 +609,15 @@ section {
 .social-links a:hover::after {
   width: 100%;
 }
+
+#footer-github:hover {
+  color: white;
+}
+
+#footer-github::after {
+  background-color: white;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
