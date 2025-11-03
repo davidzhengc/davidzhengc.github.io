@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { TbMailFilled } from "react-icons/tb";
+import emailjs from "@emailjs/browser";
+
 interface ContactFormData {
   name: string;
   email: string;
@@ -27,21 +29,39 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    /* Send email to do */
 
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+    const serviceId = "service_hrwdytb";
+    const templateId = "template_wmgy0uf";
+    const publicKey = "OmgQfTSV8tPvyC9PY";
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        alert("Message sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error("Error sending email", error);
+      });
   };
 
   return (
     <div className="contact">
       <div className="container">
-        <h2 className="section-title">Get In Touch</h2>
+        <h2 className="section-title">Contact Me</h2>
         <div className="contact-content">
           <div className="contact-info">
             <h3>Let's Connect!</h3>
