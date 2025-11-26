@@ -265,8 +265,8 @@ body {
 }
 
 .image {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   background: rgba(96, 165, 250, 0.1);
   border-radius: 50%;
   display: flex;
@@ -316,12 +316,12 @@ section {
   background: var(--bg-secondary);
 }
 
-#about-content {
+.about-content {
   max-width: 800px;
   margin: 0 auto;
 }
 
-#about-text p {
+.about-text p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   text-align: center;

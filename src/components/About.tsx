@@ -7,7 +7,7 @@ const About = () => {
     "React",
     "PHP",
     "SQL",
-    "Git",
+    "Git/Github",
   ];
 
   return (
